@@ -54,7 +54,7 @@ let update_data_foreach = function() {
         let content = "";
         for(let i = 0; i < Arrays[element.getAttribute('data-foreach')].length; i++) {
             // let cln = element.cloneNode(false)
-            content += "<p>" + Arrays[element.getAttribute('data-foreach')][i] + "</p>"
+            content += "<" + element.tagName + ">" + Arrays[element.getAttribute('data-foreach')][i] + "</" + element.tagName + ">"
             element.innerHTML = content;
         }
     })
